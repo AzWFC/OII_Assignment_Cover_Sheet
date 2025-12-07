@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+
+% --- Customisation ---
+% Cover page
+\newcommand{\AssessmentName}{Your Assessment Name}
+\newcommand{\CandidateNumber}{9999999}
+\newcommand{\SubmissionTitle}{Why Oxford SDS is the best?}
+\newcommand{\WordCount}{9999}
+\newcommand{\AIstatement}{
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+I declare that ChatGPT is the sole author of this work.
+}
+
+% Line spacing
+\newcommand{\linespacing}{2}
+\newcommand{\pargap}{1}
+
+% Colours
+\usepackage{xcolor}
+\definecolor{linkcol}{RGB}{29, 66, 166}
+
+% Cover page margin (Default 2cm)
+\newcommand{\cvmargin}{2cm}
+
+% ----------------------------
+% Line spacing
+\usepackage{setspace}
+\newcommand{\mylinespread}{\linespacing}
+\setlength{\parindent}{0pt}  % Remove paragraph indentation
+\setlength{\parskip}{\pargap\baselineskip} 
+% Type face
+\usepackage{fontspec}
+\newfontfamily\AptosFont[
+  Path=font/,
+  UprightFont = Aptos.ttf,
+  BoldFont    = Aptos-Bold.ttf,
+  ItalicFont  = Aptos-Italic.ttf,
+  BoldItalicFont = Aptos-Bold-Italic.ttf
+]{Aptos}
+\newfontfamily\LatoFont[
+  Path=font/,
+  UprightFont = Lato-Regular.ttf,
+  BoldFont    = Lato-Bold.ttf,
+  ItalicFont  = Lato-Italic.ttf,
+  BoldItalicFont = Lato-BoldItalic.ttf
+]{Lato}
+% Hyphenation
+\hyphenpenalty=10000
+\exhyphenpenalty=50
+\usepackage{microtype}
+\emergencystretch=2em
+% For tables
+\usepackage{tabularx}
+\usepackage{array}
+% Figures
+\usepackage{graphicx}
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcol,
+    urlcolor=linkcol,
+    citecolor=black
+}
+\usepackage[normalem]{ulem}
+\usepackage{apacite}
+\usepackage{natbib}
+% Abbreviation
+\usepackage[acronym]{glossaries}
+\makeglossaries
+% Time
+\usepackage[british,showdow]{datetime2}
+\usepackage[absolute,overlay]{textpos} % absolute positioning (overlay)
+\setlength{\TPHorizModule}{1pt}
+\setlength{\TPVertModule}{1pt}
+\textblockorigin{\cvmargin}{\cvmargin}
+% Checkmark
+\usepackage{amssymb}
+
+
+\begin{document}
+
+% --- Title Page #1 ---
+\newgeometry{top=\cvmargin,bottom=\cvmargin,left=\cvmargin,right=\cvmargin}
+\renewcommand{\baselinestretch}{1} % single spacing for title page
+\begin{titlepage}
+    \thispagestyle{empty}
+
+    \begin{textblock*}{5cm}(\dimexpr\textwidth-5cm\relax,0pt)
+      {%
+        \AptosFont\fontsize{9pt}{11pt}\itshape
+        \setlength{\parskip}{1pt}% paragraph separation = 1pt (local)
+        \noindent\makebox[5cm][r]{Document Created at}\par
+        \noindent\makebox[5cm][r]{\DTMcurrenttime, \DTMdisplaydate{\the\year}{\the\month}{\the\day}{-1}}\par
+      }
+    \end{textblock*}
+    
+    \includegraphics[height=2cm]{OII-logo.png}
+
+    \begin{center}
+        {\LatoFont\fontsize{20}{22}\selectfont\textbf{OII Assignment Cover Sheet}}
+        \\[2em]
+    \end{center}
+
+    \AptosFont
+    \newcolumntype{Y}{>{\raggedright\arraybackslash\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+    \newcolumntype{L}{>{\raggedright\arraybackslash\hyphenpenalty=10000\exhyphenpenalty=10000}p{7.5cm}}
+    \begin{tabularx}{\textwidth}{|L|Y|}
+        \hline
+        \vspace{0.1em}\textbf{Candidate Number}\newline\textit{Remember that your candidate number is NOT the same as your student number} & \vspace{0.1em}\CandidateNumber \\[2cm] \hline
+        
+        \vspace{0.1em}\textbf{Assignment}\newline\textit{e.g. Digital Ethics} & \vspace{0.1em}\AssessmentName \\[2cm] \hline
+        
+        \vspace{0.1em}\textbf{Title/Question}\newline\textit{Provide the full essay title, or if applicable, note the question number and the FULL question from the assigned list of questions} & \vspace{0.1em}\SubmissionTitle \\[3cm] \hline
+        
+        \vspace{0.1em}\textbf{Word Count} & \vspace{0.1em}\WordCount \\[1.5cm] \hline
+        
+        \vspace{0.1em}\textbf{AI Declaration}\newline\textit{Please adapt the template text as appropriate. If AI was used, state the AI tools used and the purpose for which they were used. Please refer to {\href{https://unioxfordnexus.sharepoint.com/:b:/r/sites/INET-OII-Teaching/Shared Documents/Policies and Guidance/OII student guidance on AI in summative assessment 2025-26.pdf?csf=1&web=1&e=p0sNh1}{\uline{the OII Guidance on use of AI in summative assessment}}} for further information and examples of declarations.\newline\newline The declaration statement is mandatory for all submitted work regardless of use of AI.}\vspace{0.5em}  & \vspace{0.1em}\AIstatement\vspace{0.75em} \\[5cm] \hline
+    \end{tabularx}
+\end{titlepage}
+
+% --- Title Page #2 ---
+\begin{titlepage}
+    \thispagestyle{empty}
+
+    \includegraphics[height=2cm]{OII-logo.png}
+    
+    % First line: Aptos, 11pt, bold
+    \vspace{1em}
+    \AptosFont
+    {\fontsize{14}{16}\textbf{By placing a tick in this box \quad $\boxed{\textcolor[rgb]{0.529,0.839,0.298}{\checkmark}}$ \quad I hereby certify as follows:}}
+    
+    \begin{enumerate}
+        \item I have read and understood the University’s disciplinary regulations concerning conduct in examinations \href{https://www.ox.ac.uk/students/academic/student-handbook}{\uline{The University Student Handbook Section 7.7}} and, in particular, the regulations on plagiarism.
+        \item I have read and understood the Education Committee’s information and guidance on \href{https://www.ox.ac.uk/students/academic/guidance/skills?wssl=1}{\uline{academic good practice and plagiarism}}.
+        \item The coursework or thesis I am submitting is entirely my own work except where otherwise indicated.
+        \item It has not been submitted, either partially or in full, either for this qualification or for another Honour School or qualification of this University (except where the Special Regulations for the subject permit this), or for a qualification at any other institution.
+        \item I have clearly indicated the presence of all material I have quoted from other sources, including any diagrams, charts, tables or graphs.
+        \item I have clearly indicated the presence of all paraphrased material with appropriate references.
+        \item I have acknowledged appropriately any assistance I have received in addition to that provided by my tutor/supervisor/adviser.
+        \item I have not copied from the work of any other candidate.
+        \item I have not used the services of any agency providing specimen, model or ghost-written work, or unauthorised or undeclared artificial intelligence in the preparation of this coursework or thesis. See also \href{https://governance.admin.ox.ac.uk/legislation/statute-xi-university-discipline-0}{\uline{section 2.4 of Statute XI on University Discipline}} under which members of the University are prohibited from providing material of this nature for candidates in examinations at this University or elsewhere. \href{https://governance.admin.ox.ac.uk/legislation/proctors-regulations-1-of-2003}{\uline{Sections 3 and 4 of Proctors' Regulations 1 of 2003}} dealing with unauthorised use of AI, also apply.
+        \item I agree to retain an electronic copy of this work until the publication of my final examination result.
+        \item I agree to make any such electronic copy available to the examiners should it be necessary to confirm my word count or to check for plagiarism.
+    \end{enumerate}
+\end{titlepage}
+
+% --- Main Pages ---
+\restoregeometry
+\renewcommand{\baselinestretch}{\mylinespread}\selectfont
+\setcounter{page}{1} % reset numbering, first real page will be page 1
+
+% -- Main Text --
+\section{Intellectual Rigor and Interdisciplinarity}
+The MSc in Social Data Science at Oxford stands apart for its seamless integration of computational methods with deep social-scientific inquiry. Students gain not only advanced training in machine learning and statistical inference, but also the theoretical grounding required to interpret data within complex social systems—an intellectual combination unmatched elsewhere \citep{johnson2018datasociety}.
+
+\section{Unparalleled Academic Environment}
+Oxford’s centuries-long tradition of scholarship provides an environment where rigorous debate, world-leading faculty, and vibrant research communities converge. The programme benefits from this ecosystem, giving students routine access to pioneering academics and cross-departmental collaborations that elevate their learning beyond disciplinary boundaries \citep{roberts2021ethics}.
+
+\section{Global Influence and Real-World Impact}
+Graduates of the programme emerge equipped to shape public policy, guide ethical technological development, and influence global debates on data governance. The degree’s reputation, combined with Oxford’s strong institutional networks, ensures its alumni are positioned to create meaningful impact across academia, industry, and government \citep{smith2020computational}.
+
+% -- Reference List --
+\linespread{1.2}\selectfont
+\bibliographystyle{apacite} % APA style
+\bibliography{refs}         % points to refs.bib
+
+\end{document}
